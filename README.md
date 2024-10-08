@@ -4,7 +4,7 @@
 ## Visão Geral:
 
 ```
-Este Crud foi desenvolvida em PHP no BAckend e Vuj no frontend e permite o cadastro de funcionários. Os dados são armazenados em um banco de dados MySQL.
+Este Crud foi desenvolvida em PHP no BAckend e Vue no frontend e permite o cadastro de funcionários. Os dados são armazenados em um banco de dados MySQL.
 ```
 
 ## Requisitos
