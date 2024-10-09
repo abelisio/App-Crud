@@ -11,20 +11,20 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Nome do funcionário</label>
-                                <v-text-field v-model="employee.name" label="Nome do funcionário" required>
+                                <v-text-field v-model="employee.nome" label="Nome do funcionário" required>
                                 </v-text-field>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Endereço do funcionário</label>
-                                <v-text-field v-model="employee.address" label="Endereço do funcionário" required>
+                                <v-text-field v-model="employee.endereco" label="Endereço do funcionário" required>
                                 </v-text-field>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <label>Telefone</label>
-                                <v-text-field v-model="employee.phone" label="Telefone do funcionário" required>
+                                <v-text-field v-model="employee.tel" label="Telefone do funcionário" required>
                                 </v-text-field>
 
                             </div>
@@ -67,9 +67,9 @@
                     <tbody>
                         <tr v-for="employee in result" :key="employee.id">
                             <td>{{ employee.id }}</td>
-                            <td>{{ employee.name }}</td>
-                            <td>{{ employee.address }}</td>
-                            <td>{{ employee.phone }}</td>
+                            <td>{{ employee.nome }}</td>
+                            <td>{{ employee.endereco }}</td>
+                            <td>{{ employee.tel }}</td>
                             <td>
                                 <v-btn type="button" color="info" @click="edit(employee)">Editar</v-btn>
 
@@ -102,9 +102,9 @@ export default {
             result: {},
             employee: {
                 id: '',
-                name: '',
-                address: '',
-                phone: ''
+                nome: '',
+                endereco: '',
+                tel: ''
 
 
             }
@@ -120,7 +120,7 @@ export default {
 
     methods: {
         EmployeeLoad() {
-            var page = "http://127.0.0.1:8000/api/employee";
+            var page = "http://127.0.0.1:8000/api/funcionario";
             axios.get(page)
                 .then(
                     ({ data }) => {
@@ -141,13 +141,13 @@ export default {
 
         },
         saveData() {
-            axios.post("http://127.0.0.1:8000/api/employee", this.employee)
+            axios.post("http://127.0.0.1:8000/api/funcionario", this.funcionario)
                 .then(
                     ({ data }) => {
                         this.EmployeeLoad();
-                        this.employee.name = '';
-                        this.employee.address = '',
-                            this.employee.phone = ''
+                        this.employee.nome = '';
+                        this.employee.endereco = '',
+                            this.employee.tel = ''
                         this.id = ''
                     }
                 )
@@ -158,13 +158,13 @@ export default {
 
         },
         updateData() {
-            var editrecords = 'http://127.0.0.1:8000/api/employee/' + this.employee.id;
+            var editrecords = 'http://127.0.0.1:8000/api/funcionario/' + this.funcionario.id;
             axios.put(editrecords, this.employee)
                 .then(
                     ({ data }) => {
-                        this.employee.name = '';
-                        this.employee.address = '',
-                            this.employee.phone = ''
+                        this.employee.nome = '';
+                        this.employee.endereco = '',
+                            this.employee.tel = ''
                         this.id = ''
                         alert("Atualizado!!!");
                         this.EmployeeLoad();
@@ -173,9 +173,9 @@ export default {
 
         },
 
-        remove(employee) {
+        remove(funcionario) {
 
-            var url = `http://127.0.0.1:8000/api/employee/${employee.id}`;
+            var url = `http://127.0.0.1:8000/api/funcionario/${funcionario.id}`;
 
 
             axios.delete(url);
