@@ -40,7 +40,7 @@
                     </form>
                 </div>
 
-                <v-table theme="dark">
+                <v-table theme="light">
                     <thead>
                         <tr>
                             <th class="text-left">
@@ -190,12 +190,12 @@ export default {
 .form-area {
     padding: 20px;
     margin-top: 20px;
-    background-color: #3f3e3e;
-    color: #fffcfc;
+    background-color: #f8f4f4;
+    color: #080808;
 }
 
 .bi-trash-fill {
-    color: red;
+    color: rgb(247, 51, 51);
     font-size: 18px;
 }
 

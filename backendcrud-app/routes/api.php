@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FuncionarioController;
+use App\Http\Controllers\EmployeeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/funcionario', FuncionarioController::class);
+Route::apiResource('/employee', EmployeeController::class);
