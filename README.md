@@ -57,7 +57,7 @@ define('DB_PASS', 'senha');
 
 
 1. **Criar um Carnê**
-- **Endpoint:** POST: http://127.0.0.1:8000/api/employee
+- **Endpoint:** POST: http://127.0.0.1:8000/api/funcionario
 - **Parâmetros:**
 - **Name:** O valor total do carnê.
 - **address**: A quantidade de parcelas.
@@ -65,7 +65,7 @@ define('DB_PASS', 'senha');
 
 
 2. **Recuperar Parcelas de um Carnê**
-Endpoint: GET: http://127.0.0.1:8000/api/employee/{id}
+Endpoint: GET: http://127.0.0.1:8000/api/funcionario/{id}
 
 #### Parâmetros:
 - **id (int):** O identificador do carnê.
