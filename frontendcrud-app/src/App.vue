@@ -1,5 +1,5 @@
 <script setup>
-import Student from './components/Employee.vue'
+import Funconario from './components/Employee.vue'
 </script>
 
 <template>
