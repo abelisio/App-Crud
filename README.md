@@ -1,4 +1,4 @@
-# Documentação do App Crud de Funcioários
+# Documentação do App Crud de Funcionários
 
 
 ## Visão Geral:
